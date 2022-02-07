@@ -1,8 +1,12 @@
 import logo from '../../assets/meet.png'
+import { useUser } from '../../context/UserContext'
 import './Header.css'
 
-const Header = ({ user }) => {
+const Header = () => {
+  const { user } = useUser()
+
   const { name, color } = user
+
   return (
     <header>
       <img src={logo} className="app-logo" alt="Alchemy Logo" />
